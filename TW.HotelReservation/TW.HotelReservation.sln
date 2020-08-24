@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Apps", "1 - Apps", "{C6EA07D7-C994-49C9-93AA-216A96DF5E4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{D0F99B25-DB8D-4EDB-9550-8D4D7EBB9764}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Repositories", "3 - Repositories", "{D80C9A0C-A656-41A2-95C3-F1A720AC586C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domains", "4 - Domains", "{0C43EFDC-7788-42EC-A0DD-5565CAE9BE1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{8BDBC1AB-9B80-4EF8-9BB2-3FAE783234D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.HotelReservation.Domain", "TW.HotelReservation.Domain\TW.HotelReservation.Domain.csproj", "{830088FF-A62E-4611-9FA9-45E0BE048711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.HotelReservation.Service", "TW.HotelReservation.Service\TW.HotelReservation.Service.csproj", "{142A4692-FFC0-43F3-8579-245D0B1EA6A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.HotelReservation.Repository", "TW.HotelReservation.Repository\TW.HotelReservation.Repository.csproj", "{EC26DF9C-5A64-4CF6-AA39-52F9BBB1BEBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.HotelReservation.ConsoleApp", "TW.HotelReservation.ConsoleApp\TW.HotelReservation.ConsoleApp.csproj", "{5DB00233-6CA1-4663-BF59-2ED7818EEF11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.HotelReservation.Test", "TW.HotelReservation.Test\TW.HotelReservation.Test.csproj", "{A9617B7D-296C-45A4-8911-6EB0E8EE70E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{830088FF-A62E-4611-9FA9-45E0BE048711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830088FF-A62E-4611-9FA9-45E0BE048711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830088FF-A62E-4611-9FA9-45E0BE048711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830088FF-A62E-4611-9FA9-45E0BE048711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142A4692-FFC0-43F3-8579-245D0B1EA6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142A4692-FFC0-43F3-8579-245D0B1EA6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142A4692-FFC0-43F3-8579-245D0B1EA6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142A4692-FFC0-43F3-8579-245D0B1EA6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC26DF9C-5A64-4CF6-AA39-52F9BBB1BEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC26DF9C-5A64-4CF6-AA39-52F9BBB1BEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC26DF9C-5A64-4CF6-AA39-52F9BBB1BEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC26DF9C-5A64-4CF6-AA39-52F9BBB1BEBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB00233-6CA1-4663-BF59-2ED7818EEF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB00233-6CA1-4663-BF59-2ED7818EEF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB00233-6CA1-4663-BF59-2ED7818EEF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB00233-6CA1-4663-BF59-2ED7818EEF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9617B7D-296C-45A4-8911-6EB0E8EE70E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9617B7D-296C-45A4-8911-6EB0E8EE70E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9617B7D-296C-45A4-8911-6EB0E8EE70E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9617B7D-296C-45A4-8911-6EB0E8EE70E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{830088FF-A62E-4611-9FA9-45E0BE048711} = {0C43EFDC-7788-42EC-A0DD-5565CAE9BE1E}
+		{142A4692-FFC0-43F3-8579-245D0B1EA6A0} = {D0F99B25-DB8D-4EDB-9550-8D4D7EBB9764}
+		{EC26DF9C-5A64-4CF6-AA39-52F9BBB1BEBE} = {D80C9A0C-A656-41A2-95C3-F1A720AC586C}
+		{5DB00233-6CA1-4663-BF59-2ED7818EEF11} = {C6EA07D7-C994-49C9-93AA-216A96DF5E4D}
+		{A9617B7D-296C-45A4-8911-6EB0E8EE70E6} = {8BDBC1AB-9B80-4EF8-9BB2-3FAE783234D7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57094BC3-540B-4AEC-9967-3DF2B0CCE65B}
+	EndGlobalSection
+EndGlobal
