@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using TW.HotelReservation.Domain.Concrete;
 using TW.HotelReservation.Domain.TypeValue;
 using TW.HotelReservation.Service;
@@ -10,19 +9,15 @@ namespace TW.HotelReservation.ConsoleApp
 {
     class Program
     {
-        private static readonly ITariffService _tariffService = Startup.GetServiceProvider().GetService<ITariffService>();
-
         static void Main()
         {
-            Startup.StartupConfig();
-
-            bool restart = true;
+            Service.StartupService();
 
             do
             {
                 StartHotelReservation();
 
-            } while (restart);
+            } while (true);
         }
 
         private static void StartHotelReservation()
@@ -65,8 +60,8 @@ namespace TW.HotelReservation.ConsoleApp
                 } while (!inputEndDate.IsDateTime(out endDate));
 
                 // Verify best hotel
-                List<DateTime> period = DateCommonService.GetPeriod(startDate, endDate);
-                Tariff bestTariff = _tariffService.GetBestTariff(clientType, period);
+                ITariffService tariffService = Service.GetServiceProvider().GetService<ITariffService>();
+                Tariff bestTariff = tariffService.GetBestTariff(clientType, DateCommonService.GetPeriod(startDate, endDate));
 
                 // Output
                 Console.WriteLine($"The cheapest hotel is {bestTariff.Hotel.Name}");
@@ -77,7 +72,5 @@ namespace TW.HotelReservation.ConsoleApp
                 Console.WriteLine($"Error: {ex.Message} - InnserException: {ex.InnerException.Message}");
             }
         }
-
-
     }
 }
