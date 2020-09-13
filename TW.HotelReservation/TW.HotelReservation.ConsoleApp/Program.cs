@@ -1,12 +1,10 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
+using TW.HotelReservation.Domain.Concrete;
 using TW.HotelReservation.Domain.TypeValue;
 using TW.HotelReservation.Service;
-using System.Collections.Generic;
-using TW.HotelReservation.Repository.Interfaces;
-using TW.HotelReservation.Repository;
 using TW.HotelReservation.Service.Interfaces;
-using TW.HotelReservation.Domain.Concrete;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace TW.HotelReservation.ConsoleApp
 {
