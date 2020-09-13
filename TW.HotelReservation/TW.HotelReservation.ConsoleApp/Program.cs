@@ -6,13 +6,18 @@ using TW.HotelReservation.Repository.Interfaces;
 using TW.HotelReservation.Repository;
 using TW.HotelReservation.Service.Interfaces;
 using TW.HotelReservation.Domain.Concrete;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace TW.HotelReservation.ConsoleApp
 {
     class Program
     {
+        private static readonly ITariffService _tariffService = Startup.GetServiceProvider().GetService<ITariffService>();
+
         static void Main()
         {
+            Startup.StartupConfig();
+
             bool restart = true;
 
             do
@@ -63,11 +68,7 @@ namespace TW.HotelReservation.ConsoleApp
 
                 // Verify best hotel
                 List<DateTime> period = DateCommonService.GetPeriod(startDate, endDate);
-
-                IHotelRepository hotelRepository = new HotelRepository();
-                ITariffService tariffService = new TariffService(hotelRepository);
-
-                Tariff bestTariff = tariffService.GetBestTariff(clientType, period);
+                Tariff bestTariff = _tariffService.GetBestTariff(clientType, period);
 
                 // Output
                 Console.WriteLine($"The cheapest hotel is {bestTariff.Hotel.Name}");
@@ -78,5 +79,7 @@ namespace TW.HotelReservation.ConsoleApp
                 Console.WriteLine($"Error: {ex.Message} - InnserException: {ex.InnerException.Message}");
             }
         }
+
+
     }
 }
