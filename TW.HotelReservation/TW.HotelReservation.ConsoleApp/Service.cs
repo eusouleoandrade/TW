@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
 using TW.HotelReservation.Repository;
 using TW.HotelReservation.Repository.Interfaces;
 using TW.HotelReservation.Service;
@@ -17,9 +16,9 @@ namespace TW.HotelReservation.ConsoleApp
             ConfigureService(_serviceCollection);
         }
 
-        public static IServiceProvider GetServiceProvider()
+        public static T GetService<T>()
         {
-            return _serviceCollection.BuildServiceProvider();
+            return _serviceCollection.BuildServiceProvider().GetService<T>();
         }
 
         private static void ConfigureService(IServiceCollection services)

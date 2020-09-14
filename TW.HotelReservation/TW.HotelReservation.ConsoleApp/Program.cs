@@ -60,7 +60,7 @@ namespace TW.HotelReservation.ConsoleApp
                 } while (!inputEndDate.IsDateTime(out endDate));
 
                 // Verify best hotel
-                ITariffService tariffService = Service.GetServiceProvider().GetService<ITariffService>();
+                ITariffService tariffService = Service.GetService<ITariffService>();
                 Tariff bestTariff = tariffService.GetBestTariff(clientType, DateCommonService.GetPeriod(startDate, endDate));
 
                 // Output
