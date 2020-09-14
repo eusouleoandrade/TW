@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 using TW.HotelReservation.Domain.Concrete;
 using TW.HotelReservation.Domain.TypeValue;
 using TW.HotelReservation.Service;
