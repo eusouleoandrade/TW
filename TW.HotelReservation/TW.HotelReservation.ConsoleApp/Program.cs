@@ -11,12 +11,16 @@ namespace TW.HotelReservation.ConsoleApp
         static void Main()
         {
             Service.StartupService();
+            StartProgram();
+        }
 
+        private static void StartProgram(bool restart = true)
+        {
             do
             {
                 StartHotelReservation();
 
-            } while (true);
+            } while (restart);
         }
 
         private static void StartHotelReservation()
